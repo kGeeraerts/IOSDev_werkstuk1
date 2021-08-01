@@ -14,6 +14,8 @@
 		3869440626B5950900B65E02 /* IOSDev_werkstuk1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3869440426B5950900B65E02 /* IOSDev_werkstuk1.xcdatamodeld */; };
 		3869440826B5950A00B65E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3869440726B5950A00B65E02 /* Assets.xcassets */; };
 		3869440B26B5950A00B65E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3869440926B5950A00B65E02 /* LaunchScreen.storyboard */; };
+		38C4519526B6EFDB005E13B5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4519426B6EFDB005E13B5 /* TableViewController.swift */; };
+		38C4519926B6F39A005E13B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4519826B6F39A005E13B5 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3869440726B5950A00B65E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3869440A26B5950A00B65E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3869440C26B5950A00B65E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38C4519426B6EFDB005E13B5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		38C4519826B6F39A005E13B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				386943FB26B5950900B65E02 /* AppDelegate.swift */,
 				386943FD26B5950900B65E02 /* SceneDelegate.swift */,
 				386943FF26B5950900B65E02 /* ViewController.swift */,
+				38C4519426B6EFDB005E13B5 /* TableViewController.swift */,
+				38C4519826B6F39A005E13B5 /* MapViewController.swift */,
 				3869440126B5950900B65E02 /* Main.storyboard */,
 				3869440726B5950A00B65E02 /* Assets.xcassets */,
 				3869440926B5950A00B65E02 /* LaunchScreen.storyboard */,
@@ -142,8 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3869440026B5950900B65E02 /* ViewController.swift in Sources */,
+				38C4519926B6F39A005E13B5 /* MapViewController.swift in Sources */,
 				386943FC26B5950900B65E02 /* AppDelegate.swift in Sources */,
 				386943FE26B5950900B65E02 /* SceneDelegate.swift in Sources */,
+				38C4519526B6EFDB005E13B5 /* TableViewController.swift in Sources */,
 				3869440626B5950900B65E02 /* IOSDev_werkstuk1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
