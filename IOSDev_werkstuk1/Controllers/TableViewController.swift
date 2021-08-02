@@ -19,9 +19,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Centra"
-
-        let Overijse: VacCent = VacCent(naam: "Vaccinatiecentrum Overijse",straat:  "Stationsplein",huisnummer: 1,postcode: 3090,gemeente: "Overijse", lat: 50.77073,long: 4.53311,telefoonnummer: "Unknown")
-        VacCents.append(Overijse)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

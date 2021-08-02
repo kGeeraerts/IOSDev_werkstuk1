@@ -63,10 +63,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GPS-Coördinaten" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-ZZ-qhW">
-                                <rect key="frame" x="40" y="304" width="338" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Latitude" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-ZZ-qhW">
+                                <rect key="frame" x="40" y="304" width="162" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Longitude" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feS-fN-hk8">
+                                <rect key="frame" x="207" y="304" width="169" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="338" id="Bw9-qd-yNV"/>
+                                    <constraint firstAttribute="width" constant="169" id="eZh-nA-A3u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -78,14 +83,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cto-K6-a1X">
                                 <rect key="frame" x="344" y="348" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addVacCent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPZ-uQ-sdp"/>
+                                    <segue destination="6e7-DW-Zho" kind="show" id="0YJ-KK-RBe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="feS-fN-hk8" secondAttribute="trailing" constant="38" id="1pc-f4-QaR"/>
                             <constraint firstItem="NBb-pG-2XF" firstAttribute="top" secondItem="55x-J5-2s9" secondAttribute="bottom" constant="10" id="7Bm-af-WaV"/>
                             <constraint firstItem="Vbc-ZZ-qhW" firstAttribute="top" secondItem="Rms-2m-4UZ" secondAttribute="bottom" constant="10" id="9KO-ic-qvd"/>
                             <constraint firstItem="GZI-jW-a3F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BHt-ta-ka0"/>
                             <constraint firstItem="cto-K6-a1X" firstAttribute="top" secondItem="Vbc-ZZ-qhW" secondAttribute="bottom" constant="10" id="D1g-hN-8xh"/>
+                            <constraint firstItem="feS-fN-hk8" firstAttribute="top" secondItem="Rms-2m-4UZ" secondAttribute="bottom" constant="10" id="DJB-xk-gjf"/>
+                            <constraint firstItem="feS-fN-hk8" firstAttribute="leading" secondItem="Vbc-ZZ-qhW" secondAttribute="trailing" constant="5" id="I3g-N9-xeI"/>
                             <constraint firstItem="Xze-JU-8Rl" firstAttribute="top" secondItem="zVQ-V3-ACE" secondAttribute="bottom" constant="10" id="Kbf-6D-DXN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cto-K6-a1X" secondAttribute="trailing" constant="40" id="Pw1-rH-Hgu"/>
                             <constraint firstItem="Rms-2m-4UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="UtA-94-Srg"/>
@@ -104,6 +116,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ftx-yw-Oxh"/>
+                    <connections>
+                        <outlet property="Postcode" destination="NBb-pG-2XF" id="1Fe-w2-3KA"/>
+                        <outlet property="gemeente" destination="cRu-9s-i8Q" id="xM9-Yl-Qu1"/>
+                        <outlet property="huisnummer" destination="55x-J5-2s9" id="p1M-dE-RH4"/>
+                        <outlet property="latitude" destination="Vbc-ZZ-qhW" id="e5P-8x-v00"/>
+                        <outlet property="longitude" destination="feS-fN-hk8" id="i6b-HO-doq"/>
+                        <outlet property="naam" destination="zVQ-V3-ACE" id="oCU-GP-ZCN"/>
+                        <outlet property="straat" destination="Xze-JU-8Rl" id="C2J-Ot-2gu"/>
+                        <outlet property="telefoonnummer" destination="Rms-2m-4UZ" id="oBc-nq-AEp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,4 +234,7 @@
             <point key="canvasLocation" x="1566.6666666666667" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZXg-vy-lKz"/>
+    </inferredMetricsTieBreakers>
 </document>
