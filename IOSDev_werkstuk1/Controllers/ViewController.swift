@@ -37,7 +37,16 @@ class ViewController: UIViewController{
     
     @IBAction func addVacCent(_ sender: UIButton) {
         
-        if self.naam.text != nil, self.straat.text != nil, self.huisnummer.text != nil, self.gemeente.text != nil, self.Postcode.text != nil, self.telefoonnummer.text != nil, self.latitude != nil, self.longitude.text != nil {
+        if self.naam.text != "" && self.straat.text != "" && self.huisnummer.text != "" && self.gemeente.text != "" && self.Postcode.text != "" && self.telefoonnummer.text != "" && self.latitude.text! != "" && self.longitude.text != "" {
+            
+            print(self.naam.text!)
+            print(self.straat.text!)
+            print(self.huisnummer.text!)
+            print(self.gemeente.text!)
+            print(self.Postcode.text!)
+            print(self.telefoonnummer.text!)
+            print(self.latitude.text!)
+            print(self.longitude.text!)
             
             let newVacCent = VacCent(naam: self.naam.text! ,straat:  self.straat.text! ,huisnummer: Int(self.huisnummer.text!)! ,postcode: Int(self.Postcode.text!)!,gemeente: self.gemeente.text!, lat: Double(self.latitude.text!)!,long: Double(self.longitude.text!)!,telefoonnummer: self.telefoonnummer.text!)
             VacCents.append(newVacCent)

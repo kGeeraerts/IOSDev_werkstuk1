@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382192BF26B8404E005F25C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382192BE26B8404E005F25C1 /* DetailViewController.swift */; };
 		386943FC26B5950900B65E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386943FB26B5950900B65E02 /* AppDelegate.swift */; };
 		386943FE26B5950900B65E02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386943FD26B5950900B65E02 /* SceneDelegate.swift */; };
 		3869440026B5950900B65E02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386943FF26B5950900B65E02 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382192BE26B8404E005F25C1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		386943F826B5950900B65E02 /* IOSDev_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSDev_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386943FB26B5950900B65E02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386943FD26B5950900B65E02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				386943FF26B5950900B65E02 /* ViewController.swift */,
 				38C4519426B6EFDB005E13B5 /* TableViewController.swift */,
 				38C4519826B6F39A005E13B5 /* MapViewController.swift */,
+				382192BE26B8404E005F25C1 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				386943FE26B5950900B65E02 /* SceneDelegate.swift in Sources */,
 				38C4519526B6EFDB005E13B5 /* TableViewController.swift in Sources */,
 				3869440626B5950900B65E02 /* IOSDev_werkstuk1.xcdatamodeld in Sources */,
+				382192BF26B8404E005F25C1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

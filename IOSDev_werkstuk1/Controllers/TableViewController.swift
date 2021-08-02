@@ -9,10 +9,6 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    var Centratemp = ["Vaccinatiecentrum Overijse", "Vaccinatiecentrum Tervuren"]
-    
-    var desc = ["Vaccinatiecentrum van Overijse", "Vaccinatiecentrum van Tervuren"]
 
     var VacCents: [VacCent] = []
     
@@ -90,8 +86,25 @@ class TableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ViewController
-        destination.VacCents = self.VacCents
+        if segue.destination is ViewController{
+            let destination = segue.destination as! ViewController
+            destination.VacCents = self.VacCents
+            
+        }else if segue.destination is DetailViewController{
+            
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedVacCent = VacCents[indexPath.row]
+        
+        let destination = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController
+        destination?.vacCent = selectedVacCent
+        
+        self.navigationController?.pushViewController(destination!, animated: true)
+        
+        //segue didn(t push the data, this solved the problem. Source: Pass data from tableView cell to another view controller Xcode 9.0 (Swift 4.0), Let Create An App
     }
 
 }
