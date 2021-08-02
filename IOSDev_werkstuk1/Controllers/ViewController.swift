@@ -36,12 +36,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var longitude: UITextField!
     
     @IBAction func addVacCent(_ sender: UIButton) {
-        //TODO Get all data
         
-        print(self.naam.text)
-        
-        
-        //TODO Add Data to array
+        if self.naam.text != nil, self.straat.text != nil, self.huisnummer.text != nil, self.gemeente.text != nil, self.Postcode.text != nil, self.telefoonnummer.text != nil, self.latitude != nil, self.longitude.text != nil {
+            
+            let newVacCent = VacCent(naam: self.naam.text! ,straat:  self.straat.text! ,huisnummer: Int(self.huisnummer.text!)! ,postcode: Int(self.Postcode.text!)!,gemeente: self.gemeente.text!, lat: Double(self.latitude.text!)!,long: Double(self.longitude.text!)!,telefoonnummer: self.telefoonnummer.text!)
+            VacCents.append(newVacCent)
+            
+        }
         
         let Tervuren: VacCent = VacCent(naam: "Vaccinatiecentrum Tervuren",straat:  "Stationsplein",huisnummer: 1,postcode: 3080,gemeente: "Tervuren", lat: 50.77073,long: 4.53311,telefoonnummer: "Unknown")
         VacCents.append(Tervuren)
