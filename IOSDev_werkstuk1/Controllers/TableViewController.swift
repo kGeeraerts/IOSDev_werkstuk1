@@ -10,14 +10,19 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var Centra = ["Vaccinatiecentrum Overijse", "Vaccinatiecentrum Tervuren"]
+    var Centratemp = ["Vaccinatiecentrum Overijse", "Vaccinatiecentrum Tervuren"]
     
     var desc = ["Vaccinatiecentrum van Overijse", "Vaccinatiecentrum van Tervuren"]
 
+    var VacCents: [VacCent] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Centra"
 
+        let Overijse: VacCent = VacCent(naam: "Vaccinatiecentrum Overijse",straat:  "Stationsplein",huisnummer: 1,postcode: 3090,gemeente: "Overijse", lat: 50.77073,long: 4.53311,telefoonnummer: "Unknown")
+        VacCents.append(Overijse)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,7 +39,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Centra.count
+        return VacCents.count
     }
 
     
@@ -43,8 +48,8 @@ class TableViewController: UITableViewController {
 
         // Configure the cell
         
-        cell.textLabel?.text = self.Centra[indexPath.row]
-        cell.detailTextLabel?.text = self.desc[indexPath.row]
+        cell.textLabel?.text = self.VacCents[indexPath.row].naam
+        cell.detailTextLabel?.text = self.VacCents[indexPath.row].description()
 
         return cell
     }
@@ -85,14 +90,11 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destination as! ViewController
+        destination.VacCents = self.VacCents
     }
-    */
 
 }

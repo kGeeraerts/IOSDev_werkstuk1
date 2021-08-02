@@ -28,4 +28,8 @@ class VacCent: NSObject {
         self.long = long
         self.telefoonnummer = telefoonnummer
     }
+    
+    func description() -> String {
+        return "Nummer: \(telefoonnummer), Adres: \(straat) \(huisnummer), \(postcode) \(gemeente)"
+    }
 }

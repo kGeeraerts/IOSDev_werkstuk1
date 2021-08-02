@@ -64,19 +64,27 @@
 		386943FA26B5950900B65E02 /* IOSDev_werkstuk1 */ = {
 			isa = PBXGroup;
 			children = (
+				38C2756226B818E900821B44 /* Controllers */,
 				386943FB26B5950900B65E02 /* AppDelegate.swift */,
 				386943FD26B5950900B65E02 /* SceneDelegate.swift */,
-				386943FF26B5950900B65E02 /* ViewController.swift */,
-				38C4519426B6EFDB005E13B5 /* TableViewController.swift */,
-				38C4519826B6F39A005E13B5 /* MapViewController.swift */,
 				3869440126B5950900B65E02 /* Main.storyboard */,
 				3869440726B5950A00B65E02 /* Assets.xcassets */,
 				3869440926B5950A00B65E02 /* LaunchScreen.storyboard */,
 				3869440C26B5950A00B65E02 /* Info.plist */,
 				3869440426B5950900B65E02 /* IOSDev_werkstuk1.xcdatamodeld */,
-				38C2756026B8158D00821B44 /* VacCent.swift */,
 			);
 			path = IOSDev_werkstuk1;
+			sourceTree = "<group>";
+		};
+		38C2756226B818E900821B44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				386943FF26B5950900B65E02 /* ViewController.swift */,
+				38C2756026B8158D00821B44 /* VacCent.swift */,
+				38C4519426B6EFDB005E13B5 /* TableViewController.swift */,
+				38C4519826B6F39A005E13B5 /* MapViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
