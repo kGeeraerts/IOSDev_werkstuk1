@@ -17,6 +17,7 @@ class VacCent: NSObject {
     var lat: Double
     var long: Double
     var telefoonnummer: String //String in case people add "+" to number
+    var saved: Bool
     
     init(naam: String, straat: String, huisnummer: Int, postcode: Int, gemeente: String, lat: Double, long: Double, telefoonnummer: String){
         self.naam = naam
@@ -27,8 +28,20 @@ class VacCent: NSObject {
         self.lat = lat
         self.long = long
         self.telefoonnummer = telefoonnummer
+        self.saved = false
     }
     
+    init(naam: String, straat: String, huisnummer: Int, postcode: Int, gemeente: String, lat: Double, long: Double, telefoonnummer: String, saved: Bool){
+        self.naam = naam
+        self.straat = straat
+        self.huisnummer = huisnummer
+        self.postcode = postcode
+        self.gemeente = gemeente
+        self.lat = lat
+        self.long = long
+        self.telefoonnummer = telefoonnummer
+        self.saved = saved
+    }
     func description() -> String {
         return "Nummer: \(telefoonnummer), Adres: \(straat) \(huisnummer), \(postcode) \(gemeente)"
     }

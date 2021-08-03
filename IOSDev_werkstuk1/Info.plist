@@ -43,6 +43,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>allow app to know your current location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>allow app to always know your location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow this app to access photo library</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

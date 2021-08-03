@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     var VacCents: [VacCent] = []
     
@@ -34,10 +34,28 @@ class ViewController: UIViewController{
     @IBOutlet weak var telefoonnummer: UITextField!
     @IBOutlet weak var latitude: UITextField!
     @IBOutlet weak var longitude: UITextField!
+    var picture: UIImage!
     
+    func saveImage(image: UIImage, name: String) -> Bool {
+        guard let data = image.jpegData(compressionQuality: 1) ?? image.pngData() else {
+            return false
+        }
+        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+            return false
+        }
+        do {
+            try data.write(to: directory.appendingPathComponent("\(name).png")!)
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
     @IBAction func addVacCent(_ sender: UIButton) {
         
         if self.naam.text != "" && self.straat.text != "" && self.huisnummer.text != "" && self.gemeente.text != "" && self.Postcode.text != "" && self.telefoonnummer.text != "" && self.latitude.text! != "" && self.longitude.text != "" {
+            
+            var saved: Bool = false
             
             print(self.naam.text!)
             print(self.straat.text!)
@@ -48,7 +66,13 @@ class ViewController: UIViewController{
             print(self.latitude.text!)
             print(self.longitude.text!)
             
-            let newVacCent = VacCent(naam: self.naam.text! ,straat:  self.straat.text! ,huisnummer: Int(self.huisnummer.text!)! ,postcode: Int(self.Postcode.text!)!,gemeente: self.gemeente.text!, lat: Double(self.latitude.text!)!,long: Double(self.longitude.text!)!,telefoonnummer: self.telefoonnummer.text!)
+            if picture != nil {
+                if saveImage(image: picture, name: self.telefoonnummer.text!) {
+                    saved = true
+                }
+            }
+            
+            let newVacCent = VacCent(naam: self.naam.text! ,straat:  self.straat.text! ,huisnummer: Int(self.huisnummer.text!)! ,postcode: Int(self.Postcode.text!)!,gemeente: self.gemeente.text!, lat: Double(self.latitude.text!)!,long: Double(self.longitude.text!)!,telefoonnummer: self.telefoonnummer.text!, saved: saved)
             VacCents.append(newVacCent)
             
         }
@@ -64,6 +88,24 @@ class ViewController: UIViewController{
         let destination = segue.destination as! TableViewController
         destination.VacCents = self.VacCents
     }
+    
+    @IBAction func Addpicture(_ sender: AnyObject) {
+        let picture = UIImagePickerController()
+        picture.delegate = self
+        
+        picture.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        picture.allowsEditing = false
+        
+        print("image requested")
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let picture = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.picture = picture
+        }
+    }
+    
     
 
 
