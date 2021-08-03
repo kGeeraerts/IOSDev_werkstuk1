@@ -29,6 +29,8 @@ class TableViewController: UITableViewController{
             VacCents.append(Heizel)
             
             defaults.set(true, forKey: "First Launch")
+        }else{
+            print("Not First Launch")
         }
         
         // Uncomment the following line to preserve selection between presentations
