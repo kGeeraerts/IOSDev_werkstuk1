@@ -10,11 +10,26 @@ import UIKit
 
 class TableViewController: UITableViewController{
 
+    var Overijse: VacCent = VacCent(naam: "Vaccinatiecentrum Overijse",straat:  "Stationsplein",huisnummer: 1,postcode: 3080,gemeente: "Tervuren", lat: 50.77073,long: 4.53311,telefoonnummer: "+32496634304")
+    var Heizel: VacCent = VacCent(naam: "Vaccinatiecentrum Heizel",straat:  "Keizerin Charlottelaan",huisnummer: 6,postcode: 1020,gemeente: "Brussel", lat: 50.89857,long: 4.3374,telefoonnummer: "+3222141919")
     var VacCents: [VacCent] = []
+    
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Centra"
+        
+        if defaults.bool(forKey: "First Launch") != true {
+            
+            print("First Launch")
+            
+            VacCents.append(Overijse)
+            VacCents.append(Heizel)
+            
+            defaults.set(true, forKey: "First Launch")
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

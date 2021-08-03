@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var regionVacCents: MKMapView!
     
@@ -27,6 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         let annotation: MKPointAnnotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2DMake(curUserLocation.coordinate.latitude, curUserLocation.coordinate.longitude)
+        annotation.title = "current location"
         regionVacCents.addAnnotation(annotation)
         
     }
@@ -56,8 +57,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
-    
 
     // MARK: - Navigation
 
 }
+
+

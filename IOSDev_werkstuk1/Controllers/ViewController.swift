@@ -77,9 +77,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             
         }
         
-        let Tervuren: VacCent = VacCent(naam: "Vaccinatiecentrum Tervuren",straat:  "Stationsplein",huisnummer: 1,postcode: 3080,gemeente: "Tervuren", lat: 50.77073,long: 4.53311,telefoonnummer: "Unknown")
-        VacCents.append(Tervuren)
-        
         print("New VacCent added")
     }
     
